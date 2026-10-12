@@ -88,9 +88,17 @@ it does, and what moves when it changes.
 
 ### Describe what exists
 
-Each heading and each line names something the system holds today. Remove
-each trace of what went away: "previously", "no longer", "we removed", "now
-uses".
+Each heading and each line names something the system or the plan holds
+today. The reader needs the current decision. Remove each
+trace of what went away or was tried first: "previously", "no longer", "we
+removed", "now uses", "instead of", "we dropped X because Y". This holds for
+each edit of a plan or a document: rewrite the line to the decision.
+
+| Filler | Direct |
+|---|---|
+| We no longer build with webpack, because we use bun. | Build with bun: `bun build src/cli.js`. |
+| Step 3 no longer copies the file; it links it instead. | Step 3 links the file. |
+| The service now uses Postgres in place of SQLite. | The service stores its data in Postgres. |
 
 ### Show the shape
 
