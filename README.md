@@ -6,7 +6,9 @@ next to them, negated instructions, announcements and recaps, and traces of
 what went away.
 
 The skill is `skills/write-md/SKILL.md`. Its flow is written in
-[lnl](https://github.com/dsl400/lnl).
+[lnl](https://github.com/dsl400/lnl). The rule `rules/write-md.md` loads for each
+`.md` file and tells the agent to run the skill, so a project gets the checks
+without the agent choosing the skill by its description.
 
 ## Why each check exists
 
@@ -32,6 +34,12 @@ writes them and checks them with ste-check.
 
 ```sh
 gh release download --repo dsl400/write-md --pattern write-md.tar.gz -O - | tar -xz -C ~/.claude/skills
+```
+
+Then, in each project, copy the rule:
+
+```sh
+mkdir -p .claude/rules && tar -xzf write-md.tar.gz -O write-md/rules/write-md.md > .claude/rules/write-md.md
 ```
 
 Or as part of [dsl400/skills](https://github.com/dsl400/skills).
