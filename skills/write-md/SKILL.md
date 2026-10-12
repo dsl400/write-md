@@ -1,6 +1,6 @@
 ---
 name: write-md
-description: Use when you write or edit a Markdown document — a README, a report, a plan, a handover, a doc under docs/. Removes the filler that language models add and keeps the statements a reader acts on.
+description: Use when you write or edit a Markdown document
 metadata:
   source: https://github.com/dsl400/write-md
   version: 0.1.0
@@ -38,6 +38,17 @@ changes.
 
 Keep a count that the reader needs and cannot see: "12 of 40 tests fail",
 "the queue holds 3 000 jobs".
+
+### State the finding about the target
+
+A list of what was searched, closed by "none of them was X", buries the one
+fact the reader needs. State that fact about X.
+
+| Filler | Direct |
+|---|---|
+| There were 3 items in its pocket and none of them was the key. | The key was not in its pocket. |
+| I checked 5 config files and none of them sets the port. | No config file sets the port; it defaults to 8080. |
+| I tried three fixes; none of them worked. | The crash remains. |
 
 ### Name the action to take
 
